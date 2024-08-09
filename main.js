@@ -1,19 +1,21 @@
-// Given a string of digits, you should replace any digit below 5 with '0'
-// and any digit 5 and above with '1'.Return the resulting string.??
+// You will be given an array a and a value x.All you need to do is check whether the provided array contains the value.
 
-function fakeBin(x) {
-    let result = '';
-    for (let i = 0; i < x.length; i++) {
-        if (Number(x[i]) < 5) {
-            result += '0'
+//     Array can contain numbers or strings.X can be either.
 
-        } else {
-            result += '1'
+// Return true
+// if the array contains the value, false
+// if not.
+
+
+function check(a, x) {
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === x) {
+            return true;
         }
     }
-    if (result === '') return
-        return result
-
+    return false
 }
 
-console.log(fakeBin('34556')); 
+let arr = [1, 2, 3, 4, 5]
+// let x= 3
+console.log(check(arr, 3))
