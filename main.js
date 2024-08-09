@@ -1,24 +1,19 @@
-// Given an array of integers.
+// Given a string of digits, you should replace any digit below 5 with '0'
+// and any digit 5 and above with '1'.Return the resulting string.??
 
-// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.0 is neither positive nor negative.
+function fakeBin(x) {
+    let result = '';
+    for (let i = 0; i < x.length; i++) {
+        if (Number(x[i]) < 5) {
+            result += '0'
 
-// If the input is an empty array or is null,
-// return an empty array.
-
-// Example
-// For input[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should
-// return [10, -65].
-function countPositivesSumNegatives(input) {
-    let coutn = 0
-    let sum = 0
-    let result = []
-    for (let i = 0; i < input.length; i++) {
-        input[i] > 0 ? coutn++ : sum += input[i]
+        } else {
+            result += '1'
+        }
     }
-    result.push(coutn)
-    result.push(sum)
-    return result
+    if (result === '') return
+        return result
+
 }
 
-
-console.log(digitize(123));
+console.log(fakeBin('34556')); 
