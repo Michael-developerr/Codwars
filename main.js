@@ -1,14 +1,23 @@
-// Write a
-// function to split a string and convert it into an array of words.
+// Create a
+// function with two arguments that will
+// return an array of the first n multiples of x.
 
-// Examples(Input == > Output):
-//     "Robin Singh" == > ["Robin", "Singh"]
+// Assume both the given number and the number of times to count will be positive numbers greater than 0.
 
-// "I love arrays they are my favorite" == > ["I", "love", "arrays", "they", "are", "my", "favorite"]
+// Return the results as an array or list(depending on language).
 
-function stringToArray(string) {
-    return string.split(' ')
+// Examples
+// countBy(1, 10) === [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// countBy(2, 5) === [2, 4, 6, 8, 10]
 
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i)
+    }
+
+
+    return z;
 }
-let str = 'Приветбменя зовут Миша'
-console.log(stringToArray(str))
+
+console.log(countBy(2, 5))
