@@ -1,18 +1,23 @@
-// Given a random non - negative number, you have to
-// return the digits of this number within an array in reverse order.
+// Given an array of integers.
 
-// Example(Input => Output):
-//     35231 => [1, 3, 2, 5, 3]
-// 0 => [0]
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.0 is neither positive nor negative.
 
-function digitize(n) {
+// If the input is an empty array or is null,
+// return an empty array.
 
-    let numArr = [];
-    while (n > 0) {
-        numArr.push(n % 10);
-        n = Math.floor(n / 10);
+// Example
+// For input[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should
+// return [10, -65].
+function countPositivesSumNegatives(input) {
+    let coutn = 0
+    let sum = 0
+    let result = []
+    for (let i = 0; i < input.length; i++) {
+        input[i] > 0 ? coutn++ : sum += input[i]
     }
-    return numArr;
+    result.push(coutn)
+    result.push(sum)
+    return result
 }
 
 
