@@ -1,21 +1,14 @@
-// You will be given an array a and a value x.All you need to do is check whether the provided array contains the value.
+// Write a
+// function to split a string and convert it into an array of words.
 
-//     Array can contain numbers or strings.X can be either.
+// Examples(Input == > Output):
+//     "Robin Singh" == > ["Robin", "Singh"]
 
-// Return true
-// if the array contains the value, false
-// if not.
+// "I love arrays they are my favorite" == > ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
+function stringToArray(string) {
+    return string.split(' ')
 
-function check(a, x) {
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] === x) {
-            return true;
-        }
-    }
-    return false
 }
-
-let arr = [1, 2, 3, 4, 5]
-// let x= 3
-console.log(check(arr, 3))
+let str = 'Приветбменя зовут Миша'
+console.log(stringToArray(str))
