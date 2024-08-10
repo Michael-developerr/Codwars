@@ -1,36 +1,13 @@
-// Конец учебного года, судьбоносный момент вашего школьного отчета.Средние баллы должны быть подсчитаны.Все ученики приходят к вам и умоляют вас подсчитать их средний балл.Легко!Вам просто нужно написать сценарий.
+// Возьмите массив и удалите каждый второй элемент из массива.Всегда сохраняйте первый элемент и начинайте удаление со следующего элемента.
+// let arr = ["Keep", "Remove", "Keep", "Remove", "Keep"]
 
-// Возвращает среднее значение заданного массива, округленное до ближайшего целого числа.
 
-// Массив никогда не будет пустым.
-let arr = [4, 5, 5, 4, 5, 2, 3]
-
-function getAverage(marks) {
-    let sum = 0
-
-    for (let i = 0; i < marks.length; i++) {
-        sum += marks[i]
-
+function removeEveryOther(arr) {
+    let result = []
+    for (let i = 0; i < arr.length; i += 2) {
+        result.push(arr[i])
     }
-    return Math.round(sum / marks.length)
+    return result
+
 }
-console.log(getAverage(arr))
-
-
-
-
-
-
-
-
-
-// function points(games) {
-//     var sum = 0;
-//     for (var i = 0; i < games.length; ++i) {
-//         if (games[i][0] > games[i][2])
-//             sum += 3;
-//         if (games[i][0] == games[i][2])
-//             sum += 1;
-//     }
-//     return sum;
-// }
+console.log(removeEveryOther(arr))
