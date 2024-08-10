@@ -1,23 +1,67 @@
-// Create a
-// function with two arguments that will
-// return an array of the first n multiples of x.
+// Description:
+//     Our football team has finished the championship.
 
-// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+// Our team 's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team'
+// s score and y is our opponents score.
 
-// Return the results as an array or list(depending on language).
+// For example: ["3:1", "2:2", "0:1", ...]
 
-// Examples
-// countBy(1, 10) === [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// countBy(2, 5) === [2, 4, 6, 8, 10]
+// Points are awarded
+// for each match as follows:
 
-function countBy(x, n) {
-    let z = [];
-    for (let i = 1; i <= n; i++) {
-        z.push(x * i)
+//     if x > y: 3 points(win)
+// if x < y: 0 points(loss)
+// if x = y: 1 point(tie)
+// We need to write a
+// function that takes this collection and returns the number of points our team(x) got in the championship by the rules given above.
+
+// Notes:
+
+//     our team always plays 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+
+// function games(matches) {
+//     let sum = 0
+//     for (let i = 0; i < matches.length; i++) {
+//         if (matches[i][0] > matches[i][2]) {
+//             sum += 3
+//         }
+//     }
+//     return sum
+// }
+// console.log(games(["3:1"]))
+
+
+function points(games) {
+    let sum = 0;
+    for (let i = 0; i < games.length; i++) {
+        if (games[i][0] > games[i][2])
+            sum += 3;
+        if (games[i][0] == games[i][2])
+            sum += 1;
     }
-
-
-    return z;
+    return sum;
 }
 
-console.log(countBy(2, 5))
+// console.log(points(["3:1"]))
+
+
+
+
+
+
+
+
+
+// function points(games) {
+//     var sum = 0;
+//     for (var i = 0; i < games.length; ++i) {
+//         if (games[i][0] > games[i][2])
+//             sum += 3;
+//         if (games[i][0] == games[i][2])
+//             sum += 1;
+//     }
+//     return sum;
+// }
