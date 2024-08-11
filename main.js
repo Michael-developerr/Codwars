@@ -1,13 +1,15 @@
-// Возьмите массив и удалите каждый второй элемент из массива.Всегда сохраняйте первый элемент и начинайте удаление со следующего элемента.
-// let arr = ["Keep", "Remove", "Keep", "Remove", "Keep"]
+// You take your son to the forest to see the monkeys.You know that there are a certain number there(n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
 
+// As a good parent, you will sit and count with him.Given the number(n), populate an array with all numbers up to and including that number, but excluding zero.
 
-function removeEveryOther(arr) {
+// For example(Input-- > Output):
+
+function monkeyCount(n) {
     let result = []
-    for (let i = 0; i < arr.length; i += 2) {
-        result.push(arr[i])
+    for (let i = 1; i <= n; i++) {
+        result.push(i)
     }
     return result
-
 }
-console.log(removeEveryOther(arr))
+console.log(monkeyCount(10))
+
