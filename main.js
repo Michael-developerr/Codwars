@@ -1,5 +1,5 @@
-// Very simple, given a number(integer / decimal / both depending on the language), find its opposite(additive inverse).
+// Complete the solution so that it reverses the string passed into it.
 
-function opposite(number) {
-    return -number
-}
+// function solution(str) {
+//     return str.split('').reverse().join('')
+// }
