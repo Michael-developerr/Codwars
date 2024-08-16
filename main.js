@@ -1,15 +1,5 @@
-// Create a
-// function that takes an integer as an argument and returns "Even"
-// for even numbers or "Odd"
-// for odd numbers.
+// Very simple, given a number(integer / decimal / both depending on the language), find its opposite(additive inverse).
 
-
-function evenOrOdd(number) {
-     if (number % 2 === 0) {
-         return "Even";
-     } else {
-         return "Odd";
-     }
-
+function opposite(number) {
+    return -number
 }
-console.log(evenOrOdd(1))
