@@ -1,23 +1,16 @@
-// Учитывая массив целых чисел, ваше решение должно найти наименьшее целое число.
+// Summation
+// Write a program that finds the summation of every number from 1 to num.The number will always be a positive integer greater than 0. Your
+// function only needs to
+// return the result, what is shown between parentheses in the example below is how you reach that result and it 's not part of it, see the sample tests.
 
-// Например:
-
-//     Учитывая, что[34, 15, 88, 2] ваше решение вернется2
-// Учитывая, что[34, -345, -1, 100] ваше решение вернется - 345
-// Для целей этого ката можно предположить, что предоставленный массив не будет пустым.
-
-let arr = [34, -345, -1, 100]
-
-function findSmallestInt(arr) {
-    let smallest = arr[0];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < smallest) {
-            smallest = arr[i];
-        }
+// For example(Input - > Output):
+function summation(num) {
+    let sum = 0;
+    for (let i = 1; i <= num; i++) {
+        sum += i;
     }
-    return smallest;
+    return sum;
 }
 
 
-console.log(findSmallestInt(arr))
+console.log(summation(10))
