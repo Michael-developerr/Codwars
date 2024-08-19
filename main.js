@@ -1,16 +1,31 @@
-// Summation
-// Write a program that finds the summation of every number from 1 to num.The number will always be a positive integer greater than 0. Your
-// function only needs to
-// return the result, what is shown between parentheses in the example below is how you reach that result and it 's not part of it, see the sample tests.
+// Вам будет предоставлен список строк. Вы должны отсортировать его в алфавитном порядке (с учетом регистра и на основе значений ASCII символов), а затем вернуть первое значение.
 
-// For example(Input - > Output):
-function summation(num) {
-    let sum = 0;
-    for (let i = 1; i <= num; i++) {
-        sum += i;
+// Возвращаемое значение должно быть строкой и содержать "***"
+// между каждой из ее букв.
+
+// Не следует удалять или добавлять элементы из / в массив.
+const animals = ['elephant', 'Dog', 'CAT', 'cow', 'horse', 'Bird'];
+
+function twoSort(s) {
+    s.sort((a, b) => {
+        if (a < b) {
+            return -1;
+        } else if (a > b) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+
+    let firstWord = s[0]; 
+    let result = "";
+    for (let i = 0; i < firstWord.length; i++) {
+        result += firstWord[i];
+        if (i < firstWord.length - 1) {
+            result += "***";
+        }
     }
-    return sum;
+    return result;
 }
 
-
-console.log(summation(10))
+console.log(twoSort(animals))
