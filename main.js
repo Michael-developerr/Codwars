@@ -1,11 +1,23 @@
-// Write a
-// function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+// Учитывая массив целых чисел, ваше решение должно найти наименьшее целое число.
 
-function repeatStr(n, s) {
-    let str = ''
-    for (let i = 0; i < n; i++) {
-        str += s
+// Например:
+
+//     Учитывая, что[34, 15, 88, 2] ваше решение вернется2
+// Учитывая, что[34, -345, -1, 100] ваше решение вернется - 345
+// Для целей этого ката можно предположить, что предоставленный массив не будет пустым.
+
+let arr = [34, -345, -1, 100]
+
+function findSmallestInt(arr) {
+    let smallest = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
     }
-    return str
+    return smallest;
 }
-console.log(repeatStr(4, 'привет'))
+
+
+console.log(findSmallestInt(arr))
