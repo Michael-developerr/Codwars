@@ -1,31 +1,15 @@
-// Вам будет предоставлен список строк. Вы должны отсортировать его в алфавитном порядке (с учетом регистра и на основе значений ASCII символов), а затем вернуть первое значение.
+// You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
 
-// Возвращаемое значение должно быть строкой и содержать "***"
-// между каждой из ее букв.
+// Save the animals by switching them back.You will be given an array which will have three values(tail, body, head).It is your job to re - arrange the array so that the animal is the right way round(head, body, tail).
 
-// Не следует удалять или добавлять элементы из / в массив.
-const animals = ['elephant', 'Dog', 'CAT', 'cow', 'horse', 'Bird'];
+// Same goes
+// for all the other arrays / lists that you will get in the tests: you have to change the element positions with the same exact logics
 
-function twoSort(s) {
-    s.sort((a, b) => {
-        if (a < b) {
-            return -1;
-        } else if (a > b) {
-            return 1;
-        } else {
-            return 0;
-        }
-    });
+// Simples!
 
-    let firstWord = s[0]; 
-    let result = "";
-    for (let i = 0; i < firstWord.length; i++) {
-        result += firstWord[i];
-        if (i < firstWord.length - 1) {
-            result += "***";
-        }
-    }
-    return result;
-}
 
-console.log(twoSort(animals))
+let arrSort = ['tail', 'body', 'head'];
+
+let sortArr = arr => arr.reverse()
+
+console.log(sortArr(arrSort))
