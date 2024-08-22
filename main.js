@@ -1,15 +1,18 @@
-// You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+// В этом простом упражнении вы создадите программу, которая принимает значение, integer и возвращает список его кратных вплоть до другого значения.limit Если limitявляется кратным integer, его также следует включить.В функцию будут передаваться только положительные целые числа, не состоящие из 0. Предел всегда будет выше основания.
 
-// Save the animals by switching them back.You will be given an array which will have three values(tail, body, head).It is your job to re - arrange the array so that the animal is the right way round(head, body, tail).
-
-// Same goes
-// for all the other arrays / lists that you will get in the tests: you have to change the element positions with the same exact logics
-
-// Simples!
+// Например, если переданы параметры(2, 6), функция должна вернуть[2, 4, 6] значения, поскольку 2, 4 и 6 являются кратными 2 до 6.
 
 
-let arrSort = ['tail', 'body', 'head'];
 
-let sortArr = arr => arr.reverse()
+function findMultiples(integer, limit) {
+    let result = []; 
 
-console.log(sortArr(arrSort))
+    for (let i = integer; i <= limit; i++) { 
+        if (i % integer === 0) {
+            result.push(i) 
+        }
+    }
+    return result;
+}
+
+console.log(findMultiples(2, 6)); 
