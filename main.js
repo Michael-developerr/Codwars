@@ -1,9 +1,18 @@
-// Завершите функцию, которая принимает два аргумента и возвращает все числа, делящиеся на заданный делитель.Первый аргумент— массив, numbersа второй— divisor.
+// Напишите функцию для преобразования имени в инициалы. Эта ката строго принимает два слова с одним пробелом между ними.
 
-let num = [1, 2, 3, 4, 5, 6, 7, 8]
+// Вывод должен состоять из двух заглавных букв, разделенных точкой.
 
-function divisibleBy(numbers, divisor) {
-    return numbers.filter(n => n % divisor == 0)
-}
+// Это должно выглядеть так:
 
-console.log(divisibleBy(num, 2));
+// Sam Harris=>S.H
+
+// patrick feeney=>P.F
+
+function abbrevName(name){
+    let names = name.split(" ");
+   return names[0][0].toUpperCase() + "." + names[1][0].toUpperCase();
+       
+     
+   
+   }
+   abbrevName('Sam Harris')
