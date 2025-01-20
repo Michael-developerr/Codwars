@@ -8,11 +8,12 @@
 
 // patrick feeney=>P.F
 
-function abbrevName(name){
+function abbrevName(name) {
     let names = name.split(" ");
-   return names[0][0].toUpperCase() + "." + names[1][0].toUpperCase();
-       
-     
-   
-   }
-   abbrevName('Sam Harris')
+    return names[0][0].toUpperCase() + '.' + names[1][0].toUpperCase();
+
+
+
+
+}
+console.log(abbrevName('Sam Harris'))
